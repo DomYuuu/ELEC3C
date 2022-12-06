@@ -1,0 +1,85 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #a34302;
+}
+
+.contents{
+    text-align: center;
+}
+
+.abtUs{
+    background-color: pink;
+}
+
+.signIn {
+	font-family: 'Montserrat', sans-serif;
+	background: rgba(255,255,255, 0.8);
+	border-width: fit-content;
+	border-radius: 35px;
+	padding: 40px;
+	box-shadow: 5px 5px 20px #a34302;
+	margin-bottom: 50px;
+}
+
+.loginPage{
+    font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	margin: 0px;
+	padding: 0px;
+	background-attachment: fixed;
+	background-image: linear-gradient(#fff6e6,#FFDFA7);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.content{
+    min-height: 100hv;
+    width: 100%;
+    height: 100%;
+}
+
+#sidenav{
+    background-color: blanchedalmond;
+    min-width: 250px;
+    max-width: 250px;
+    height: 100%;
+    position: absolute;
+}
+hr.h-color{
+    background-color: #000;
+}
+
+.sidebar li a{
+    color: #000;
+}
+
+.sidebar li a:hover{
+    background-color: brown;
+    border-radius: 8px;
+    color: white;
+}
+
+.sidebar li:active{
+    background: brown;
+    border-radius: 8px;
+    color: white;
+}
+
+.sidebar li:active a{
+    color: #000;
+}
+
+@media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+    #side_nav.active{
+        margin-left: 0;
+        
+    }
+}
