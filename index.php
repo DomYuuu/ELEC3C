@@ -4,6 +4,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <script src="https://kit.fontawesome.com/4505ce12d2.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
     </head>
     <body>
@@ -51,18 +52,20 @@
           <div class="col-sm-6 text-center">
             <h3>From</h3>
             <p>E.G. Street: Padre Noval St City: Manila</p>
-            <p>Name of Street: <input id="street"></p> 
-            <p>City: <input id="city"></p>
+            <p>Name of Street: <input class="inputBoxMain" id="street"></p> 
+            <p>City: <input class="inputBoxMain" id="city"></p>
           </div>
 
           <div style="border-left:1px solid #000;height:20vh" class="col-sm-6 text-center mb-2">
             <h3>To</h3>
             <p>E.G. Street: Antonio St City: Manila</p>
-            <p>Name of Street: <input id="ToStreet"></p>
-            <p>City: <input id="ToCity"></p>
+            <p>Name of Street: <input class="inputBoxMain" id="ToStreet"></p>
+            <p>City: <input class="inputBoxMain" id="ToCity"></p>
           </div>
           <hr class="h-color mx-2">
           <div class="text-center mt-2">
+            <h2 id="route"><b>Espana Blvd. <i class="fa-solid fa-arrow-right"></i> Mayon ave.</b></h2>
+            <p>__________________________________</p>
             <p>Cost of first km : 20 php </p>
             <p>Cost of succeeding half km : 5 php </p>
             <p id="distance">Total Distance: </p>
