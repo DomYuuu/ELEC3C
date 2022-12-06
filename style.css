@@ -26,6 +26,10 @@ body{
     text-align: center;
 }
 
+.signInPage{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .signIn {
 	background: rgba(255,255,255, 0.8);
 	border-width: fit-content;

@@ -1,22 +1,7 @@
-<?php
-
-if(isset($_POST['submit']))
-{
-    session_start();
-    $_SESSION['uname'] = htmlentities($_POST['uname']);
-    $_SESSION['password'] = htmlentities($_POST['password']);
-    header('Location: homepage.php');
-}
-?>
-
-<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <meta charset="ISO-8859-1">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <title>Lab Act</title>
     </head>
     <body>
@@ -36,10 +21,6 @@ if(isset($_POST['submit']))
               
               <li class="nav-item">
                   <a class="nav-link" href="aboutUs.php">ABOUT US</a>
-              </li>
-              
-              <li class="nav-item">
-                  <a href="index.php"><button class="btn btn-outline-danger">Logout</button></a>
               </li>
               
           </ul>
@@ -69,14 +50,24 @@ if(isset($_POST['submit']))
 
                     <p>USERNAME<input class="form-control" type="text" name="uname" placeholder="Enter your Username..." required></p>
                     <p>PASSWORD<input class="form-control" type="password" name="pass" placeholder="Enter your Password..." required></p>
-                    <p style="text-align: center"; class="text-decoration-none"><a href="createAcc.html">Don't have an Account?</a></p>
+                    <p style="text-align: center"; class="text-decoration-none"><a href="createAcc.php">Don't have an Account?</a></p>
                     <input class="form-control btn btn-outline-warning" type="submit" name="submit" value="Login">
                  </form>
              </div>
 
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     
     </body>
 </html>
+<?php
+
+if(isset($_POST['submit']))
+{
+    session_start();
+    $_SESSION['uname'] = htmlentities($_POST['uname']);
+    $_SESSION['password'] = htmlentities($_POST['password']);
+    header('Location: index.php');
+}
+?>

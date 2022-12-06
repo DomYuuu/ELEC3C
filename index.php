@@ -26,6 +26,10 @@
               </li>
 
               <li class="nav-item">
+                  <a class="nav-link" href="listOfSaved.php">LIST</a>
+              </li>
+
+              <li class="nav-item">
                   <a class="nav-link" href="loginPage.php">SIGN IN</a>
               </li>
               

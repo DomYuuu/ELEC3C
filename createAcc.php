@@ -33,10 +33,11 @@
                         <h1><b>Create an Account</b></h1>
                         <h4>Enter Details</h4>
                         <form action="">
-                            <p>Email:<input class="form-control" type="email" required></p>
+                            <p>Email<input class="form-control" type="email" required></p>
                             <p>First Name<input class="form-control" type="text" required></p>
+                            <p>Last Name<input class="form-control" type="text" required></p>
+                            <p>Username<input class="form-control" type="text" required></p>
                             <p>Password<input class="form-control" type="password" required></p>
-                            <p>Re-Enter Password<input class="form-control" type="password" required></p>
                             <p><button class="btn form-control btn-warning" type="submit">Create</button></p>
                         </form>
                     </div>

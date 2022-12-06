@@ -14,12 +14,8 @@
                 </div>
                 <ul class="list-unstyled px-2">
                     <li ><a href="index.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="aboutUs.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-light fa-circle-question"></i> About Us</a></li>
                 </ul>
                 <hr class="h-color mx-2">
-                <ul class="unstyled-list px-2">
-                    <li><a href="index.php" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
-                </ul>
             </div>
         </div>
 
