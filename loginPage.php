@@ -19,16 +19,41 @@ if(isset($_POST['submit']))
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lab Act</title>
     </head>
-    <body class="signPage">
-    <div class="container">
+    <body>
+
+    <nav class="navbar navbar-expand-xl navbar-light bg-warning">
+    <a class="navbar-brand px-4 fs-1" href="index.php">VROOM</a>
+      
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-lable="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto text-center px-4">
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="index.php">HOME</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="aboutUs.php">ABOUT US</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a href="index.php"><button class="btn btn-outline-danger">Logout</button></a>
+              </li>
+              
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
 
         <div class="row justify-content-center">
 
-            <div class="col-sm-2 col-md-2 col-lg-3 col-xl-3">
+            <div class="col-sm-2 col-md-2 col-lg-3 col-xl-8">
 
                  <div class="text-center">
-                    <br>
-                  <img class="img-fluid" alt="Responsive image" src="vroomlogo.png">
+                  <img class="img-fluid" alt="Responsive image" width="350px" height="350px" src="vroomlogo.png">
             
                   </div>
 
