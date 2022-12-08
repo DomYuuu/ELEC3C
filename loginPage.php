@@ -1,3 +1,40 @@
+<?php
+if(isset($_COOKIE['account']))
+{
+    header("location:index.php");
+}
+class Account{
+public $fname;
+public $lname;
+public $user;
+function __construct($fname,$lname,$user)
+{
+    $this->fname=$fname;
+    $this->lname=$lname;
+    $this->user=$user;
+}
+}
+if(isset($_POST['submit']))
+{
+   $conn = new mysqli("localhost", "root", "123456", "elecfinalproj");
+   $sql = "select * from accounts where Username='" . $_POST["uname"] . "' and Password='" . $_POST["pass"]."'";
+    $res = $conn->query($sql);
+    if($res->num_rows>0)
+    {
+        $acc = $res->fetch_row();
+        $acc = new Account($acc[0],$acc[1],$acc[2]);
+        $acc = serialize($acc);
+        setcookie("account",$acc,time() + 3600);
+        echo "<script>alert('Successful login');window.location.href='index.php'</script>";
+    }
+    else
+    {
+        echo "<script>alert('No Accounts found')</script>";
+    }
+}
+?>
+
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -46,7 +83,7 @@
 
             <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 signIn">
 
-                <form class="form-group" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <form class="form-group" method="POST" action="loginPage.php">
 
                     <p>USERNAME<input class="form-control" type="text" name="uname" placeholder="Enter your Username..." required></p>
                     <p>PASSWORD<input class="form-control" type="password" name="pass" placeholder="Enter your Password..." required></p>

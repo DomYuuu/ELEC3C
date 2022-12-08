@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE['account']))
+{
+    header("location:index.php");
+}
+?>
 <html>
     <head>
         <title>Map Test</title>
@@ -32,20 +38,40 @@
                     <div class="formDesign">
                         <h1><b>Create an Account</b></h1>
                         <h4>Enter Details</h4>
-                        <form action="">
-                            <p>Email<input class="form-control" type="email" required></p>
-                            <p>First Name<input class="form-control" type="text" required></p>
-                            <p>Last Name<input class="form-control" type="text" required></p>
-                            <p>Username<input class="form-control" type="text" required></p>
-                            <p>Password<input class="form-control" type="password" required></p>
-                            <p><button class="btn form-control btn-warning" type="submit">Create</button></p>
+                        <form action="createAcc.php" method="post">
+                            <p>Username:<input class="form-control" name="user" type="text" required></p>
+                            <p>First Name<input class="form-control" name="fname" type="text" required></p>
+                            <p>Last Name<input class="form-control" name="lname" type="text" required></p>
+                            <p>Password<input class="form-control" name="pw" type="password" required></p>
+                            <p><button class="btn btn-warning" name="submit" type="submit">Create</button></p>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-
+<?php
+    if(isset($_POST["user"]))
+    {
+        $conn = new mysqli("localhost", "root", "123456", "elecfinalproj");
+        $sql = "insert into accounts values('" . $_POST['fname'] . "','" . $_POST['lname'] . "','" . $_POST['user']. "','" . $_POST['pw']. "')";
+        try{
+            if($conn->query($sql)===TRUE)
+            {
+            echo "<script>alert('success!');window.location.href='index.php'</script>";    
+            
+            }
+        else
+            echo "<script>alert('Username is already taken!')</script>";    
+        }
+        catch(Exception $e)
+        {
+            echo "<script>alert('Username is already taken!')</script>";    
+        }
+        
+    }
+    
+?>
 
 
 
