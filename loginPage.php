@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
         $acc = $res->fetch_row();
         $acc = new Account($acc[0],$acc[1],$acc[2]);
         $acc = serialize($acc);
-        setcookie("account",$acc);
+        setcookie("account",$acc,time() + 3600);
         echo "<script>alert('Successful login');window.location.href='index.php'</script>";
     }
     else

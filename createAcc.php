@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE['account']))
+{
+    header("location:index.php");
+}
+?>
 <html>
     <head>
         <title>Map Test</title>
